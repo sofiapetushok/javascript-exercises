@@ -1,18 +1,19 @@
 const fibonacci = function(index) {
     const sequence = [0,1];
-    const fibo = [0,1];
-    const Id = parseFloat(index); 
+    const fiboSequence = [0,1];
+    const maxIndex = 100;
+    const indexVal = parseFloat(index); 
     if (Id > 0) {
-        for (i = 2; i < 100; i++) {
+        for (i = 2; i < maxIndex; i++) {
             const prev = sequence[i - 2];
             const next = sequence[i - 1]; 
             const sumNum = prev + next;
-            fibo.push(sumNum);        
+            fiboSequence.push(sumNum);        
             sequence.push(sumNum);
         };
         // console.log(fibo);
         // console.log(sequence[Id]);
-        return sequence[Id];
+        return sequence[indexVal];
     } else {
         return "OOPS";
     }
